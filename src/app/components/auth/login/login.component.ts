@@ -19,7 +19,7 @@ export class LoginComponent {
         this.authService.login(data).subscribe({
             next: (user) => {
                 console.log('Success!', user);
-                // this.router.navigate(['/dashboard']);
+                this.router.navigate(['/dashboard']);
             },
             error: (e) => alert(e.error.message)
         });
