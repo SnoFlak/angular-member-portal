@@ -1,0 +1,12 @@
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+    <label for="email">Email:</label>
+    <input type="text" name="email" ngModel required />
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" ngModel required />
+
+    <button type="submit" value="Register" [disabled]="!registerForm.valid">
+        Register
+    </button>
+</form>

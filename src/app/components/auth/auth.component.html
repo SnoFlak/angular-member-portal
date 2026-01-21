@@ -1,0 +1,15 @@
+<section>
+    <div>
+        @if (isLoginMode()) {
+            <auth-login />
+        } @else {
+            <auth-register />
+        }
+    </div>
+    
+    <div>
+        <button (click)="toggleMode()">
+            {{ isLoginMode() ? 'Need an account? Register' : 'Already have an account? Login'}}
+        </button>
+    </div>
+</section>

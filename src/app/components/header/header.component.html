@@ -1,0 +1,9 @@
+<section>
+    <div>
+        @if (authService.isLoggedIn()) {
+            <p>Hello {{authService.currentUser()?.email}}</p>
+        } @else {
+            <p>Please Log In</p>
+        }
+    </div>
+</section>
